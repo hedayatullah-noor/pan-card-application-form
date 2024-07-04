@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)file:///C:/Users/nemat/form.html?+first-name=&last-name=&age=&father=&mother= -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAN Card Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .form-container {
+            background-color:rgb(116, 169, 1) ;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            background-color: blue;
+        }
+        .form-box {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        .form-box input,
+        .form-box select {
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .form-box.gender {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .form-box.gender .radio-label {
+            display: flex;
+            align-items: center;
+        }
+        .form-box.gender .radio-label .male{
+            color: aqua;
+        }
+        .form-box.gender .radio-label .female{
+            color: rgb(219, 8, 43);
+        }
+        .form-box.gender .radio-label input {
+            margin-right: 5px;
+        }
+        .form-final {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .form-final .submit input{
+            color: green;
+            
+        }
+        .form-final .reset input{
+            color: red;
+        }
+        .form-final input .submit,
+        .form-final input .reset{
+            width: 48%;
+            padding: 10px;
+            box-sizing: border-box;
+            justify-content: space-between;
+        
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>PAN Card Application Form</h1>
+        <form>
+            <div class="form-box">
+                <select name="honorifics" required="">
+                    <option value="" disabled="" selected="">Honorifics</option>
+                    <option value="mr">Mr</option>
+                    <option value="mrs">Mrs</option>
+                    <option value="md">Md</option>
+                </select>
+            </div>
+            <div class="form-box">
+                <input type="text" name="first-name" placeholder="First Name" required="">
+            </div>
+            <div class="form-box">
+                <input type="text" name="last-name" placeholder="Last Name">
+            </div>
+            <div class="form-box">
+                <input type="date" name="bod" placeholder="Date of Birth" required="">
+            </div>
+            <div class="form-box gender">
+                <div class="radio-label">
+                    <div class="male">
+                    <input type="radio" name="gender" value="male" required=""> Male
+                </div>
+                </div>
+                <div class="radio-label">
+                    <div class="female">
+                    <input type="radio" name="gender" value="female" required=""> Female
+                </div>
+                </div>
+            </div>
+            <div class="form-box">
+                <input type="text" name="father" placeholder="Father&#39;s Name" required="">
+            </div>
+            <div class="form-box">
+                <input type="text" name="mother" placeholder="Mother&#39;s Name" required="">
+            </div>
+            <div class="form-box">
+                <input type="number" name="phone" placeholder="Phone" pattern="[0-9]{10}" required="">
+            </div>
+            <div class="form-final">
+               <div class="submit"><input type="submit" value="Submit"></div>
+                <div class="reset"><input type="reset" value="Reset"></div>
+            </div>
+        </form>
+    </div>
+
+
+</body></html>
